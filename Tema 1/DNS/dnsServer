@@ -1,0 +1,22 @@
+Vamos a comenzar con la actividad, para ello lo primero que he hecho ha 
+sido encender la máquina vitual que voy a usar.
+
+Lo primero que haremos será instalar bind9 que es un servicio de dns para 
+hostear nuestro dns para ello usaremos el comando 'apt-get install bind9'
+
+Ahora modificaremos el archivo '/etc/bind/named.conf.local'. En este 
+archivo lo que haremos será agregar nuestra nueva zona, en nuestro caso 
+prueba.com.
+
+Como el directorio que le especificamos en file no existe lo crearemos 
+con un 'mkdir /etc/bind/zones'
+
+Como no había puesto el sudo no tenía permisos para modificar el archivo, 
+ahora sí guardamos y creamos la carpeta.
+
+Ahora que ya lo tenemos creado le copiaremos un archivo que ya tenemos de 
+ejemplo llamado 'db.local'.
+
+Ahora que ya está el archivo copiado lo podemos abrir y editar. Aquí lo 
+que hemos hecho ha sido reemplazar localhost por prueba.com como 
+recomienda el vídeo
