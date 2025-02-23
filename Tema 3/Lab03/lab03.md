@@ -1,6 +1,6 @@
 Vamos a comenzar con el laboratorio 3:
 
--- Ejercicio 3.1:
+# Ejercicio 3.1:
 1. Abrimos y editamos el archivo con vi:
 Lo que hemos hecho ha sido crear el archivo y una vez dentro hemos pulsado 
 la tecla 'i' para entrar en modo edición, luego lo hemos editado y cuando 
@@ -23,13 +23,13 @@ podría ser usado para dañar el sistema.
 Una alternativa sería usar permisos 755 para restringir los permisos de 
 escritura a otros.
 
--- Ejercicio 3.2:
+# Ejercicio 3.2:
 1. Crear usuarios bob y smith:
 Hemos usado el comando adduser para crear los 2 usuarios y luego hemos 
 hecho un cat junto con un grep para buscar el el fichero /etc/passwd si 
 existen y efectivamente se han creado.
 
--- Ejercicio 3.3:
+# Ejercicio 3.3:
 1. Crear directorio público con permisos adecuados:
 Hemos creado el directorio /home/ncs con todos los permisos para todos los 
 usuarios.
@@ -46,7 +46,7 @@ Como podemos ver el resultado es el esperado, se muestra hello world
 Finalmente vemos como el script tiene permiso de ejecución para todos los 
 usuarios.
 
--- Ejercicio 3.4:
+# Ejercicio 3.4:
 #Como usuario bob:
 1. Iniciar sesión como bob:
 Con el comando su - bob
@@ -81,7 +81,7 @@ Como resultado nos dice que no tenemos permiso y es correcto porque este
 archivo solo lo puede ejecutar bob, de esta forma podemos controlar los 
 permisos.
 
--- Ejecicio 3.5:
+# Ejecicio 3.5:
 1. Crear el grupo sysadmins y añadir a los usuarios:
 - Crear el grupo - groupadd sysadmins
 - Añadir los usuarios - sudo usermod -aG sysadmins (user)
