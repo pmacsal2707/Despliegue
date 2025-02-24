@@ -104,4 +104,42 @@ eliminar sus archivos.
 Si intentamos entrar no nos deja porque está actualmente desactivada, así 
 que ha funcionado.
 
+## `chmod` en Modo Numérico  
+
+En Linux, los permisos se representan con números:  
+
+| Permiso  | Valor | Significado  |
+|----------|------|--------------|
+| `r` (read)    | 4    | Lectura |
+| `w` (write)   | 2    | Escritura |
+| `x` (execute) | 1    | Ejecución |
+
+Cada tipo de usuario (propietario, grupo y otros) recibe un número basado en la suma de estos valores:  
+
+| Número | Permisos | Explicación |
+|--------|---------|------------|
+| `0` | `---` | Sin permisos |
+| `1` | `--x` | Solo ejecución |
+| `2` | `-w-` | Solo escritura |
+| `3` | `-wx` | Escritura y ejecución |
+| `4` | `r--` | Solo lectura |
+| `5` | `r-x` | Lectura y ejecución |
+| `6` | `rw-` | Lectura y escritura |
+| `7` | `rwx` | Todos los permisos |
+
+**Ejemplos:**  
+- `chmod 754 archivo` → **Propietario:** `rwx`, **Grupo:** `r-x`, **Otros:** `r--`  
+- `chmod 600 archivo` → **Propietario:** `rw-`, **Grupo:** `---`, **Otros:** `---`  
+- `chmod 777 archivo` → **⚠ (Inseguro) Todos pueden leer, escribir y ejecutar**  
+
+---
+
+## `chmod +x` (Modo Simbólico)  
+
+El comando `chmod +x` agrega permiso de ejecución (`x`) a un archivo.  
+
+**Sintaxis:**  
+```bash
+chmod [quién] [acción] [permisos] archivo
+
 Finalmente hemos terminado la actividad, un saludo :)
