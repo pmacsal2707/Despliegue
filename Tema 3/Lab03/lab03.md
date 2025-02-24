@@ -24,17 +24,18 @@ Una alternativa sería usar permisos 755 para restringir los permisos de
 escritura a otros.
 
 # Ejercicio 3.2:
-1. Crear usuarios bob y smith:
+1. Crear usuarios bob y smith: - sudo adduser nombre_usuario
+  (alternativamente podemos usar 'useradd')
 Hemos usado el comando adduser para crear los 2 usuarios y luego hemos 
 hecho un cat junto con un grep para buscar el el fichero /etc/passwd si 
-existen y efectivamente se han creado.
+existen y efectivamente se han creado. - cat /etc/passwd | grep nombre_usuario
 
 # Ejercicio 3.3:
 1. Crear directorio público con permisos adecuados:
 Hemos creado el directorio /home/ncs con todos los permisos para todos los 
 usuarios.
 
-2. Crear script hello.sh usando vi:
+2. Crear script hello.sh usando vi: - 'vi nombre_del_archivo'
 Hemos creado el archivo, lo hemos editado y luego hemos guardado.
 
 3. Hacer el script ejecutable:
@@ -114,7 +115,8 @@ En Linux, los permisos se representan con números:
 | `w` (write)   | 2    | Escritura |
 | `x` (execute) | 1    | Ejecución |
 
-Cada tipo de usuario (propietario, grupo y otros) recibe un número basado en la suma de estos valores:  
+Cada tipo de usuario (propietario, grupo y otros) recibe un número
+basado en la suma de estos valores:  
 
 | Número | Permisos | Explicación |
 |--------|---------|------------|
