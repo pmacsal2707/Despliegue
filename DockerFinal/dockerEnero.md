@@ -3,6 +3,7 @@ Vamos a comenzar con la actividad de subida de nota de docker:
 # 1. Descargar imágenes necesarias:
 php:7.4-apache y mariadb:latest
 - Comando: docker pull php:7.4-apache
+  ![](images/apache.png)
 - Comando: docker pull mariadb:latest
 
 Con el comando 'docker images' podemos ver todas las imagenes que tenemos 
